@@ -7,8 +7,8 @@ export const useFetchTags = () => {
     const getData = async () => {
         try {
             const response = await fetch(
-                "http://jint_backend.test/api/tags/all"
-                // "http://127.0.0.1:8000/api/tags/all"
+                // "http://jint_backend.test/api/tags/all"
+                "http://127.0.0.1:8000/api/tags/all"
             );
             //const data = await response.json();
             const tags = await response.json();

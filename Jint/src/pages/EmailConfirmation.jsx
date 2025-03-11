@@ -13,8 +13,8 @@ const EmailConfirmation = () => {
 
     const handleSendCode = async () => {
         try {
-            // const response = await axios.post('http://127.0.0.1:8000/api/send-code', { email });
-            const response = await axios.post('http://jint_backend.test/api/send-code', { email });
+            const response = await axios.post('http://127.0.0.1:8000/api/send-code', { email });
+            // const response = await axios.post('http://jint_backend.test/api/send-code', { email });
             
             console.log('Código enviado al email:', email);
             setIsCodeSent(true);
@@ -27,8 +27,8 @@ const EmailConfirmation = () => {
 
     const handleVerifyCode = async () => {
         try {
-            const response = await axios.post('http://jint_backend.test/api/verify-code', { email, code });
-            // const response = await axios.post('http://127.0.0.1:8000/api/verify-code', { email, code });
+            // const response = await axios.post('http://jint_backend.test/api/verify-code', { email, code });
+            const response = await axios.post('http://127.0.0.1:8000/api/verify-code', { email, code });
             console.log('Código ingresado:', code);
             console.log('Respuesta del servidor:', response.data);
             navigate(`${ROUTE_PATHS.RESET_PASSWORD}/${response.data.userId}`);

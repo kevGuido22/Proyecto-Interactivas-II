@@ -9,8 +9,8 @@ export const useFetchEventsWeek = () => {
     const getData = async () => {
         try {
             const response = await fetch(
-                `http://jint_backend.test/api/events/eventsWeek/${user.id}`
-                // `http://127.0.0.1:8000/api/events/eventsWeek/${user.id}`
+                // `http://jint_backend.test/api/events/eventsWeek/${user.id}`
+                `http://127.0.0.1:8000/api/events/eventsWeek/${user.id}`
             )
             const eventsWeek = await response.json()
             setData(eventsWeek)

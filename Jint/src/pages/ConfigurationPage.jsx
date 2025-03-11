@@ -25,8 +25,8 @@ export function ConfigurationPage() {
         const fetchUserData = async () => {
             try {
                 if (user && user.id) {
-                    // const response = await axios.get(`http://127.0.0.1:8000/api/usersData/show/${user.id}`);
-                    const response = await axios.get(`http://jint_backend.test/api/usersData/show/${user.id}`);
+                    const response = await axios.get(`http://127.0.0.1:8000/api/usersData/show/${user.id}`);
+                    // const response = await axios.get(`http://jint_backend.test/api/usersData/show/${user.id}`);
 
                     const userData = response.data;
                     setAge(userData.age || '');
@@ -65,8 +65,8 @@ export function ConfigurationPage() {
         
 
         try {
-            // const response = await axios.post(`http://127.0.0.1:8000/api/usersData/store`, userData, {
-         const response = await axios.post(`http://jint_backend.test/api/usersData/store`, userData, {
+            const response = await axios.post(`http://127.0.0.1:8000/api/usersData/store`, userData, {
+        //  const response = await axios.post(`http://jint_backend.test/api/usersData/store`, userData, {
                 headers: {
                     'Content-Type': 'application/json',
                 }

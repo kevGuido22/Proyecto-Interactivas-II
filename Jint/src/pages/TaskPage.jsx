@@ -58,8 +58,8 @@ export function TaskPage() {
 
         try {
             const response = await fetch(
-                `http://jint_backend.test/api/search/event/${search_input}/${category_id}/${tag_id}/${user_id}`
-                // `http://127.0.0.1:8000/api/search/event/${search_input}/${category_id}/${tag_id}/${user_id}`
+                // `http://jint_backend.test/api/search/event/${search_input}/${category_id}/${tag_id}/${user_id}`
+                `http://127.0.0.1:8000/api/search/event/${search_input}/${category_id}/${tag_id}/${user_id}`
             );
 
             if (!response.ok) {

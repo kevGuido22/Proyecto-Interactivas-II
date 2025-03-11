@@ -14,8 +14,8 @@ const ChangePassword = () => {
     const handleChangePassword = async () => {
         if (password === confirmPassword) {
             try {
-                const response = await axios.post(`http://jint_backend.test/api/change-password/${userId}`, {
-                // const response = await axios.post(`http://127.0.0.1:8000/api/change-password/${userId}`, {
+                // const response = await axios.post(`http://jint_backend.test/api/change-password/${userId}`, {
+                const response = await axios.post(`http://127.0.0.1:8000/api/change-password/${userId}`, {
 
                     password,
                     password_confirmation: confirmPassword,

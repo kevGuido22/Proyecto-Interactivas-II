@@ -55,8 +55,8 @@ export function SignUp() {
         const profile_type_id = 2; 
 
         try {
-            const response = await axios.post('http://jint_backend.test/api/users/store', {
-            // const response = await axios.post('http://127.0.0.1:8000/api/users/store', {
+            // const response = await axios.post('http://jint_backend.test/api/users/store', {
+            const response = await axios.post('http://127.0.0.1:8000/api/users/store', {
                 username,
                 name,
                 email,
